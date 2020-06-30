@@ -9,7 +9,7 @@ xray(URI, 'tbody', {
 })
 .then(obj => {
   let quests = obj.quests.map(quest => {
-    return { quest: quest, uri: obj.uris.shift() }
+    return { name: quest, uri: obj.uris.shift() }
   });
   
   fs.writeFileSync('quests.json', JSON.stringify(quests, null, 4));
