@@ -8,11 +8,9 @@ xray(URI, 'tbody', {
   uris: ['tr td:nth-child(1) a@href']
 })
 .then(obj => {
-  let fstream = fs.createWriteStream('quests.txt', { flags: 'w' });
-
-  obj.quests.map(quest => {
-    fstream.write(`${quest}|${obj.uris.shift()}\n`);
+  let quests = obj.quests.map(quest => {
+    return { quest: quest, uri: obj.uris.shift() }
   });
-
-  fstream.end();
+  
+  fs.writeFileSync('quests.json', JSON.stringify(quests, null, 4));
 })
