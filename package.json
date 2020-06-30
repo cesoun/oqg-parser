@@ -1,0 +1,17 @@
+{
+  "name": "oqg-parser",
+  "version": "1.0.0",
+  "description": "Parses the OSRS Wiki Optimal Quest Guide into a text file.",
+  "main": "index.js",
+  "repository": "https://github.com/cesoun/oqg-parser",
+  "author": "Christopher Oswald",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "x-ray": "^2.3.4"
+  }
+}
