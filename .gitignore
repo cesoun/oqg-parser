@@ -7,4 +7,4 @@ yarn-error.log*
 
 .idea/
 
-quests.json
+quests*.json
